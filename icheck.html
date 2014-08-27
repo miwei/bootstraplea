@@ -1,0 +1,53 @@
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bootstrap 101 Template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+<link href="css/blue/blue.css" rel="stylesheet">
+    <script src="http://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
+       <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/plugins/icheck.js"></script>
+ <style>
+ body{
+ margin:30px;
+ }
+label{margin:5px;}
+ </style>
+ <script>
+ $(function() {
+ 
+ $('input').iCheck({
+    checkboxClass: 'icheckbox_minimal-blue',
+    radioClass: 'iradio_minimal-blue',
+    increaseArea: '20%' // optional
+  });
+ });
+ </script>
+  </head>
+  <body>
+
+<input type="text" class="form-control"/>
+<hr style="margin:30px;" >
+<label>input-1</label><input type="checkbox">
+<label>input-2</label><input type="checkbox" checked>
+<div>
+<label>radio-1</label><input type="radio" name="iCheck">
+<label>radio-2</label><input type="radio" name="iCheck" checked>
+ 
+    </div>
+    
+    
+<hr style="margin:30px;" >
+<div class="alert alert-warning alert-dismissable">
+  <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+  <strong>Warning!</strong> Best check yo self, you're not looking too good.
+</div>
+
+    
+  </body>
+</html>
+

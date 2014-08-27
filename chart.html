@@ -1,0 +1,94 @@
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bootstrap 101 Template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+   
+    <script src="js/plugins/Chart.js"></script>
+ <style>
+ body{
+ margin:30px;
+ }
+ </style>
+ 
+  </head>
+  <body>
+  <h2>Line Chart</h2>
+<canvas id="myChartLine" width="500" height="300"></canvas>
+
+<hr/>
+  <h2>Bar Chart</h2>
+<canvas id="myChartBar"  width="600" height="300"></canvas>
+<hr/>
+  <h2>Pie Chart</h2>
+<canvas id="myChartPie"  width="300" height="300"></canvas>
+<hr/>
+  </body>
+</html>
+<script>
+ var dataLine = {
+	labels : ["January","February","March","April","May","June","July"],
+	datasets : [
+		{
+			fillColor : "rgba(220,220,220,0.5)",
+			strokeColor : "rgba(220,220,220,1)",
+			pointColor : "rgba(220,220,220,1)",
+			pointStrokeColor : "#fff",
+			data : [65,59,90,81,56,55,40]
+		},
+		{
+			fillColor : "rgba(151,187,205,0.5)",
+			strokeColor : "rgba(151,187,205,1)",
+			pointColor : "rgba(151,187,205,1)",
+			pointStrokeColor : "#fff",
+			data : [28,48,40,19,96,27,100]
+		}
+	]
+};
+ var ctxLine=document.getElementById("myChartLine").getContext("2d");
+//This will get the first returned node in the jQuery collection.
+  new Chart(ctxLine).Line(dataLine);
+ </script>
+
+ <script>
+ var dataBar = {
+	labels : ["January","February","March","April","May","June","July"],
+	datasets : [
+		{
+			fillColor : "rgba(220,220,220,0.5)",
+			strokeColor : "rgba(220,220,220,1)",
+			data : [65,59,90,81,56,55,40]
+		},
+		{
+			fillColor : "rgba(151,187,205,0.5)",
+			strokeColor : "rgba(151,187,205,1)",
+			data : [28,48,40,19,96,27,100]
+		}
+	]
+};
+var ctxBar=document.getElementById("myChartBar").getContext("2d");
+//This will get the first returned node in the jQuery collection.
+new Chart(ctxBar).Bar(dataBar);
+ </script>
+ <script>
+ var dataPie =[
+	{
+		value: 30,
+		color:"#F38630"
+	},
+	{
+		value : 50,
+		color : "#E0E4CC"
+	},
+	{
+		value : 100,
+		color : "#69D2E7"
+	}			
+];
+var ctxPie=document.getElementById("myChartPie").getContext("2d");
+//This will get the first returned node in the jQuery collection.
+new Chart(ctxPie).Pie(dataPie);
+ </script>

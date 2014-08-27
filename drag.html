@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="us">
+<head>
+	<meta charset="utf-8">
+	<title>jQuery UI Example Page</title>
+	<link href="css/jquery-ui-1.10.4.css" rel="stylesheet">
+	<script src="js/jquery-1.10.2.js"></script>
+	<script src="js/jquery-ui-1.10.4.js"></script>
+	<script>
+	$(function() {
+
+	$( "#draggable1" ).draggable();
+	  $( "#draggable3" ).draggable({ containment: "#containment-wrapper", scroll: false });
+	  $( "#draggable4" ).draggable({ handle: "p" });
+	  //$( "div, p" ).disableSelection();
+});
+	</script>
+	<style>
+	body{
+		font: 62.5% "Trebuchet MS", sans-serif;
+		margin: 50px;
+	}
+.draggable { width: 90px; height: 90px; padding: 0.5em; float: left; margin: 0 10px 10px 0; }
+#containment-wrapper { width: 95%; height:150px; border:2px solid #ccc; padding: 10px; }
+ #draggable4{ width: 600px; height: 120px;  float: left; margin: 0 10px 10px 0; border:1px solid #ccc;}
+#draggable4 p { cursor: move; margin:0;line-height:30px;padding:0 15px;}
+
+	</style>
+</head>
+<body>
+
+<div id="draggable1" class="ui-widget-content">
+<p>Drag me around</p>
+</div>
+
+<h2>within another DOM element:</h2>
+<div id="containment-wrapper">
+<div id="draggable3" class="draggable ui-widget-content">
+<p>I'm contained within the box</p>
+</div>
+
+</div>
+
+<h2>Drag by a handle</h2>
+<div id="draggable4" class="">
+<p class="ui-widget-header">I can be dragged only by this handle</p>
+</div>
+
+</body>
+</html>
